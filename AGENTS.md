@@ -1,0 +1,23 @@
+# The Office 英语学习网站
+
+## 内容来源与持久化
+
+- 本仓库是后续学习笔记的唯一维护目标；不要再向旧的 iCloud Markdown 剧本追加笔记。
+- 当前课程页：`episodes/s09e01.html`。
+- 分析台词前，先在旧剧本来源中核对原句和说话人：`/Users/I540371/Library/Mobile Documents/com~apple~CloudDocs/家人共享/英语/The Office/S09E01.md`。
+- 不改写已核实的原台词，不虚构剧情、说话人或上下文。
+
+## 页面结构
+
+- 新增剧集时创建 `episodes/sxxexx.html`，并在 `index.html` 添加课程入口。
+- 每个学习片段按“原台词 → 自然中文/语境 → 核心表达 → 发音或语法 → 主动练习”组织。
+- 明确标注口语、职场用语、讽刺、冒犯性、过时表达和角色特有的怪异说法。
+- 使用现有 Bootstrap 组件和 `assets/css/styles.css` 中的设计语言；不要把大量 CSS/JS 内联到 HTML。
+- 所有站内链接使用相对路径，确保仓库部署在 Gitee Pages 子路径时仍可访问。
+- 图片应使用有明确开源/免费许可的真实资源并下载到 `assets/images/`，同时在 README 中注明来源。
+
+## 验证
+
+- 本地用 `python3 -m http.server 8080` 预览。
+- 修改后检查 HTML 链接、静态资源、移动端布局和浏览器控制台错误。
+- 未经用户明确要求，不提交、不推送，也不代替用户声称 Gitee Pages 已启用。
