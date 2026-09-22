@@ -1,6 +1,6 @@
 # The Office (US) English Learning · Jesse
 
-通过《The Office (US)》真实对白学习自然美式英语的静态网站，面向 Gitee Pages 部署。
+通过《The Office (US)》真实对白学习自然美式英语的静态网站，使用 GitHub Pages 部署。
 
 ## 内容
 
@@ -19,9 +19,13 @@ python3 -m http.server 8080
 
 浏览器访问 `http://localhost:8080/`。
 
-## Gitee Pages
+## GitHub Pages
 
-仓库是纯静态网站，发布目录为仓库根目录，入口为 `index.html`。在 Gitee 仓库的服务菜单中启用 Gitee Pages，选择 `main` 分支和根目录。若当前账户未开放 Pages 服务，也可将同一目录部署到任意静态托管平台。
+仓库地址：<https://github.com/USER4277/the-office-us-learning-jesse>
+
+网站地址：<https://user4277.github.io/the-office-us-learning-jesse/>
+
+仓库是纯静态网站，入口为根目录的 `index.html`。`.github/workflows/pages.yml` 会在 `main` 分支更新后自动将整个仓库发布到 GitHub Pages。
 
 ## 后续笔记维护
 
