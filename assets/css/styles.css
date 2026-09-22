@@ -73,6 +73,7 @@ a { color: inherit; text-decoration: none; }
 .episode-action { width: 52px; height: 52px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; }
 .episode-card:hover .episode-action { background: var(--green); color: #061510; border-color: var(--green); }
 .method-section { padding: 90px 0; background: var(--soft); border-block: 1px solid var(--line); }
+.method-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
 .method-card { height: 100%; position: relative; padding: 30px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); }
 .method-card > span { position: absolute; top: 20px; right: 22px; color: var(--muted); font: 600 .7rem ui-monospace, monospace; }
 .method-card > i { width: 46px; height: 46px; display: grid; place-items: center; margin-bottom: 30px; border-radius: 14px; background: var(--green-soft); color: var(--green-deep); }
@@ -162,6 +163,21 @@ mark { padding: .05em .15em; color: inherit; background: linear-gradient(transpa
 .register.tone { background: var(--amber-soft); color: #96610a; }
 .pronunciation { padding: 24px; border: 1px solid var(--line); border-radius: 18px; background: var(--soft); }
 .pronunciation ul { margin-bottom: 0; color: var(--muted); }
+.pattern-card { padding: 24px; border: 1px solid rgba(34, 197, 139, .28); border-radius: 20px; background: linear-gradient(135deg, var(--green-soft), var(--paper)); }
+.pattern-label, .grammar-tag { display: inline-flex; padding: 4px 10px; border-radius: 999px; background: var(--green); color: #062116; font-size: .68rem; font-weight: 700; letter-spacing: .08em; }
+.pattern-formula { margin: 16px 0 8px; color: var(--ink); font: 600 clamp(1.05rem, 2vw, 1.35rem)/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.pattern-source { margin-bottom: 18px; color: var(--muted); font-family: Georgia, "Times New Roman", serif; font-size: 1.05rem; }
+.pattern-breakdown { display: flex; flex-wrap: wrap; gap: 8px; }
+.pattern-breakdown span { padding: 7px 11px; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); color: var(--muted); font-size: .8rem; }
+.imitation-grid, .grammar-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 14px; }
+.imitation-grid > div, .grammar-grid article { padding: 20px; border: 1px solid var(--line); border-radius: 16px; }
+.imitation-grid span { color: var(--green-deep); font-size: .7rem; font-weight: 700; letter-spacing: .08em; }
+.imitation-grid p { margin: 7px 0 2px; font-family: Georgia, "Times New Roman", serif; }
+.imitation-grid small, .grammar-grid p { color: var(--muted); }
+.grammar-tag { background: var(--blue-soft); color: #3262a2; }
+.grammar-grid h4 { margin: 12px 0 6px; font-size: 1rem; }
+.grammar-grid p { margin-bottom: 0; font-size: .88rem; }
+.grammar-grid .do-dont, .grammar-grid .use-it { margin-top: 13px; padding: 11px; border-radius: 10px; background: var(--soft); color: var(--ink); }
 .retell { font-family: Georgia, serif; font-size: 1.12rem; }
 .practice-actions { display: flex; flex-wrap: wrap; gap: 10px; }
 .practice-card .btn-outline-dark { border-color: rgba(255,255,255,.35); color: var(--paper); }
@@ -175,6 +191,7 @@ mark { padding: .05em .15em; color: inherit; background: linear-gradient(transpa
 
 @media (max-width: 991.98px) {
   .container { padding-inline: 24px; }
+  .method-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .navbar-collapse { padding: 14px 0 20px; }
   .hero-visual { min-height: 440px; transform: none; }
   .lesson-layout { grid-template-columns: 1fr; gap: 20px; }
@@ -192,6 +209,7 @@ mark { padding: .05em .15em; color: inherit; background: linear-gradient(transpa
   .episode-meta { margin-top: 10px; }
   .lesson-layout { padding-top: 44px; }
   .vocab-grid, .compare-grid { grid-template-columns: 1fr; }
+  .method-grid, .imitation-grid, .grammar-grid { grid-template-columns: 1fr; }
   .phrase-list article { grid-template-columns: 30px 1fr; }
   .phrase-list .register { grid-column: 2; justify-self: start; }
   .dialogue-card { grid-template-columns: 40px 1fr; padding: 20px 16px; }
