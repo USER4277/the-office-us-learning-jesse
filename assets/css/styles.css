@@ -120,7 +120,7 @@ a { color: inherit; text-decoration: none; }
 .dialogue-card { display: grid; grid-template-columns: 48px 1fr; gap: 17px; padding: 26px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--soft); }
 .dialogue-card.compact { padding: 20px 26px; }
 .speaker-avatar { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 15px; font-weight: 700; }
-.erin { background: #fde7ed; color: #a52d53; } .dwight { background: #e5edcf; color: #4d6818; } .doctor { background: #e5eefc; color: #2e5b9e; } .angela { background: #eee4fa; color: #74419d; } .kevin { background: #ffead9; color: #98531e; } .oscar { background: #dff3f4; color: #216b70; } .pam { background: #fbe5ef; color: #9b3864; } .jim { background: #e4edf8; color: #315f91; }
+.erin { background: #fde7ed; color: #a52d53; } .dwight { background: #e5edcf; color: #4d6818; } .doctor { background: #e5eefc; color: #2e5b9e; } .angela { background: #eee4fa; color: #74419d; } .kevin { background: #ffead9; color: #98531e; } .oscar { background: #dff3f4; color: #216b70; } .pam { background: #fbe5ef; color: #9b3864; } .jim { background: #e4edf8; color: #315f91; } .kelly { background: #f7e1f2; color: #9b2f79; } .ryan { background: #e8e7f8; color: #524f9a; }
 .speaker { margin: 0 0 6px; color: var(--muted); font-size: .76rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
 blockquote { margin: 0; color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.12rem, 2vw, 1.32rem); line-height: 1.62; }
 mark { padding: .05em .15em; color: inherit; background: linear-gradient(transparent 54%, rgba(34, 197, 139, .28) 54%); }
