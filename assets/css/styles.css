@@ -72,6 +72,12 @@ a { color: inherit; text-decoration: none; }
 .lesson-preview i { color: var(--green-deep); margin-right: 6px; }
 .episode-action { width: 52px; height: 52px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; }
 .episode-card:hover .episode-action { background: var(--green); color: #061510; border-color: var(--green); }
+.extension-entry-section { padding: 0 0 90px; }
+.extension-entry-card { display: grid; grid-template-columns: 88px minmax(0, 1fr) 60px; gap: 24px; align-items: center; padding: 28px 32px; border: 1px solid rgba(34, 197, 139, .25); border-radius: 28px; background: linear-gradient(115deg, var(--green-soft), var(--paper) 58%); }
+.extension-entry-icon { width: 72px; height: 72px; display: grid; place-items: center; border-radius: 22px; background: var(--green); color: #062116; font-size: 1.45rem; }
+.extension-entry-card h2 { margin: 6px 0; font-size: 1.8rem; letter-spacing: -.04em; }
+.extension-entry-card p { margin-bottom: 12px; color: var(--muted); }
+.extension-entry-card:hover .episode-action { background: var(--green); color: #061510; border-color: var(--green); }
 .method-section { padding: 90px 0; background: var(--soft); border-block: 1px solid var(--line); }
 .method-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
 .method-card { height: 100%; position: relative; padding: 30px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); }
@@ -188,6 +194,40 @@ mark { padding: .05em .15em; color: inherit; background: linear-gradient(transpa
 .error-page h1 { font-size: clamp(2.5rem, 7vw, 5rem); letter-spacing: -.06em; }
 .error-page p { color: var(--muted); }
 .toast { color: var(--ink); background: var(--paper); border: 1px solid var(--line); }
+.extension-hero { padding: 140px 0 64px; border-bottom: 1px solid var(--line); background: radial-gradient(circle at 12% 25%, rgba(34, 197, 139, .23), transparent 28%), var(--soft); }
+.extension-hero h1 { margin: 10px 0; font-size: clamp(3rem, 7vw, 6rem); font-weight: 650; letter-spacing: -.07em; }
+.extension-hero > .container > p { max-width: 820px; color: var(--muted); font-size: 1.08rem; }
+.extension-stats { display: flex; gap: 12px; margin-top: 24px; }
+.extension-stats span { padding: 8px 13px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper); color: var(--muted); font-size: .78rem; }
+.extension-stats strong { color: var(--green-deep); }
+.extension-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 32px; padding-top: 64px; padding-bottom: 100px; }
+.extension-sidebar { position: relative; }
+.extension-content { min-width: 0; }
+.extension-topic > h2 { margin: 14px 0 8px; font-size: clamp(2.2rem, 4vw, 3.7rem); font-weight: 650; letter-spacing: -.055em; }
+.topic-lead { max-width: 900px; color: var(--muted); font-size: 1.05rem; }
+.family-map { display: grid; grid-template-columns: repeat(7, auto); align-items: center; gap: 12px; margin: 30px 0; padding: 22px; border: 1px solid var(--line); border-radius: 22px; background: var(--soft); overflow-x: auto; }
+.family-map > div { min-width: 150px; display: grid; padding: 15px; border-radius: 15px; background: var(--paper); }
+.family-map > div span { color: var(--green-deep); font-size: .68rem; font-weight: 700; }
+.family-map > div strong { margin: 3px 0; }
+.family-map > div small { color: var(--muted); }
+.family-map > i { color: var(--green-deep); }
+.extension-word-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.extension-word-card { padding: 24px; border: 1px solid var(--line); border-radius: 20px; }
+.extension-word-head { display: flex; justify-content: space-between; gap: 16px; }
+.extension-word-head span { color: var(--green-deep); font-size: .68rem; font-weight: 700; letter-spacing: .08em; }
+.extension-word-head h3 { margin: 3px 0 12px; font-size: 1.45rem; }
+.extension-word-head code { color: var(--muted); font-size: .78rem; }
+.definition { color: var(--ink); font-weight: 700; }
+.extension-word-card > p:not(.definition), .formal-note { color: var(--muted); font-size: .9rem; }
+.collocation-list { display: flex; flex-wrap: wrap; gap: 7px; margin: 15px 0; padding: 0; list-style: none; }
+.collocation-list li { padding: 5px 9px; border-radius: 8px; background: var(--soft); color: var(--muted); font: .75rem ui-monospace, monospace; }
+.role-compare { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 15px; }
+.role-compare span, .compare-mini { padding: 10px; border-radius: 10px; background: var(--soft); color: var(--muted); font-size: .78rem; }
+.compare-mini { margin-top: 14px; }
+.compare-mini p { margin: 3px 0; }
+.sentence-chain { display: grid; gap: 8px; }
+.sentence-chain p { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 12px; margin: 0; padding: 13px; border: 1px solid var(--line); border-radius: 12px; font-family: Georgia, "Times New Roman", serif; }
+.sentence-chain span { color: var(--green-deep); font: 700 .7rem Inter, sans-serif; }
 
 @media (max-width: 991.98px) {
   .container { padding-inline: 24px; }
@@ -195,13 +235,17 @@ mark { padding: .05em .15em; color: inherit; background: linear-gradient(transpa
   .navbar-collapse { padding: 14px 0 20px; }
   .hero-visual { min-height: 440px; transform: none; }
   .lesson-layout { grid-template-columns: 1fr; gap: 20px; }
-  .lesson-sidebar { display: none; }
+  .lesson-sidebar, .extension-sidebar { display: none; }
+  .extension-layout { grid-template-columns: 1fr; }
 }
 @media (max-width: 767.98px) {
   .container { padding-inline: 18px; }
   .hero-section { padding: 118px 0 64px; }
   .hero-stats { gap: 16px; }
   .episode-card { grid-template-columns: 82px 1fr; padding: 20px; gap: 18px; }
+  .extension-entry-card { grid-template-columns: 64px 1fr; padding: 22px; }
+  .extension-entry-icon { width: 58px; height: 58px; border-radius: 17px; }
+  .extension-entry-card .episode-action { display: none; }
   .episode-number { width: 78px; height: 92px; font-size: 2.25rem; }
   .episode-action { display: none; }
   .lesson-preview { display: grid; }
@@ -210,6 +254,7 @@ mark { padding: .05em .15em; color: inherit; background: linear-gradient(transpa
   .lesson-layout { padding-top: 44px; }
   .vocab-grid, .compare-grid { grid-template-columns: 1fr; }
   .method-grid, .imitation-grid, .grammar-grid { grid-template-columns: 1fr; }
+  .extension-word-grid { grid-template-columns: 1fr; }
   .phrase-list article { grid-template-columns: 30px 1fr; }
   .phrase-list .register { grid-column: 2; justify-self: start; }
   .dialogue-card { grid-template-columns: 40px 1fr; padding: 20px 16px; }

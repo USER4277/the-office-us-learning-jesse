@@ -6,6 +6,7 @@
 
 - `index.html`：课程首页
 - `episodes/s09e01.html`：S09E01「New Guys」精讲
+- `extensions/index.html`：独立词汇、词族和语法的拓展学习区
 - `assets/css/styles.css`：全站视觉样式
 - `assets/js/app.js`：朗读、复制、深色模式和学习进度
 - `assets/images/`：本地化图片资源
