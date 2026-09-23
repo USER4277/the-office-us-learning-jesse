@@ -228,6 +228,25 @@ mark { padding: .05em .15em; color: inherit; background: linear-gradient(transpa
 .sentence-chain { display: grid; gap: 8px; }
 .sentence-chain p { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 12px; margin: 0; padding: 13px; border: 1px solid var(--line); border-radius: 12px; font-family: Georgia, "Times New Roman", serif; }
 .sentence-chain span { color: var(--green-deep); font: 700 .7rem Inter, sans-serif; }
+.extension-topic-divider { margin-top: 90px; padding-top: 76px; border-top: 1px solid var(--line); }
+.communication-hero-card { margin-top: 28px; padding: 28px; border: 1px solid rgba(34, 197, 139, .28); border-radius: 22px; background: linear-gradient(125deg, var(--green-soft), var(--paper)); }
+.communication-phrase { margin: 14px 0 2px; color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.8rem, 4vw, 3.4rem); font-weight: 700; letter-spacing: -.04em; }
+.communication-use-grid, .communication-category-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.communication-use-grid article, .communication-category-grid article { padding: 20px; border: 1px solid var(--line); border-radius: 16px; }
+.communication-use-grid i { width: 40px; height: 40px; display: grid; place-items: center; margin-bottom: 18px; border-radius: 12px; background: var(--green-soft); color: var(--green-deep); }
+.communication-use-grid h4, .communication-category-grid h4 { font-size: 1rem; }
+.communication-use-grid p, .communication-use-grid small, .communication-category-grid p, .communication-category-grid small { color: var(--muted); }
+.communication-category-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.communication-category-grid span { color: var(--green-deep); font-size: .68rem; font-weight: 700; letter-spacing: .08em; }
+.communication-category-grid h4 { margin: 8px 0 5px; }
+.communication-category-grid p { margin-bottom: 8px; font-size: .85rem; }
+.communication-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 18px; }
+.communication-table { width: 100%; min-width: 820px; border-collapse: collapse; }
+.communication-table th, .communication-table td { padding: 15px 18px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.communication-table th { background: var(--soft); color: var(--muted); font-size: .72rem; letter-spacing: .06em; }
+.communication-table td { font-size: .84rem; }
+.communication-table tbody tr:last-child td { border-bottom: 0; }
+.pronunciation-line { color: var(--green-deep); font: 700 1.1rem ui-monospace, monospace; letter-spacing: .08em; }
 
 @media (max-width: 991.98px) {
   .container { padding-inline: 24px; }
@@ -255,6 +274,7 @@ mark { padding: .05em .15em; color: inherit; background: linear-gradient(transpa
   .vocab-grid, .compare-grid { grid-template-columns: 1fr; }
   .method-grid, .imitation-grid, .grammar-grid { grid-template-columns: 1fr; }
   .extension-word-grid { grid-template-columns: 1fr; }
+  .communication-use-grid, .communication-category-grid { grid-template-columns: 1fr; }
   .phrase-list article { grid-template-columns: 30px 1fr; }
   .phrase-list .register { grid-column: 2; justify-self: start; }
   .dialogue-card { grid-template-columns: 40px 1fr; padding: 20px 16px; }
