@@ -30,7 +30,7 @@
       <span class="eyebrow"><i class="fa-solid fa-compass me-2"></i>Beyond the show</span>
       <h1>拓展学习</h1>
       <p>记录独立询问、但不直接属于《The Office》台词的词汇、词族、语法和表达。与剧集课程分开整理，方便集中复习。</p>
-      <div class="extension-stats"><span><strong>10</strong> 个主题</span><span><strong>48+</strong> 个沟通表达</span></div>
+      <div class="extension-stats"><span><strong>11</strong> 个主题</span><span><strong>60+</strong> 个沟通表达</span></div>
     </div>
   </header>
 
@@ -48,6 +48,7 @@
         <a class="toc-link" href="#project-onboarding-introduction"><span>08</span><div>项目入组自我介绍<small>经验 · 技能 · 职责</small></div></a>
         <a class="toc-link" href="#to-be-decided"><span>09</span><div>“待定”怎么说<small>TBD · pending · tentative</small></div></a>
         <a class="toc-link" href="#meeting-invitation-wording"><span>10</span><div>会议邀请措辞<small>align on · time slot · suitable</small></div></a>
+        <a class="toc-link" href="#utilities-ontology-terms"><span>11</span><div>Utilities Ontology 架构术语<small>CIM · BFO · DER · MaCo</small></div></a>
         <div class="sidebar-tip"><i class="fa-solid fa-bookmark"></i><p>以后独立询问的高价值英语内容会继续收录在这里。</p></div>
       </div>
     </aside>
@@ -692,6 +693,79 @@
           <div><span class="eyebrow">Active recall</span><h3>快速修正</h3></div>
           <ol><li>随时提出其他时间。→ ________ free to suggest another time.</li><li>我们需要就范围达成一致。→ We need to align ________ the scope.</li><li>如果这个时段不方便。→ If this time slot doesn’t ________ for you.</li></ol>
           <details><summary>查看答案</summary><p>1. Feel　2. on　3. work</p></details>
+        </div>
+      </section>
+
+      <section class="extension-topic" id="utilities-ontology-terms">
+        <div class="lesson-kicker"><span>EXTENSION 11 · DOMAIN TERMINOLOGY</span></div>
+        <h2>Utilities Ontology 架构图术语</h2>
+        <p class="topic-lead">图中展示的是一套双向建模思路：上层从行业标准构建“学术／标准本体”，下层从实际 SAP Utilities 系统抽取“系统本体”，中间通过映射层对齐两套语义。</p>
+
+        <div class="note-section">
+          <h3><i class="fa-solid fa-layer-group"></i> 三层架构</h3>
+          <div class="communication-table-wrap"><table class="communication-table">
+            <thead><tr><th>图中术语</th><th>中文</th><th>在架构中的作用</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Top-down</strong></td><td>自上而下</td><td>先采用通用本体和行业标准，再细化到 Utilities 领域及具体系统。</td></tr>
+              <tr><td><strong>“Academic” ontology layer</strong></td><td>“学术／标准”本体层</td><td>由外部标准和通用概念组成；引号表示这是图作者的概括性名称，不一定是正式产品名。</td></tr>
+              <tr><td><strong>Mapping layer</strong></td><td>映射层</td><td>建立上下层概念、属性和关系之间的对应，处理名称与粒度差异。</td></tr>
+              <tr><td><strong>Bottom-up</strong></td><td>自下而上</td><td>从真实系统、数据模型和业务对象抽取概念。</td></tr>
+              <tr><td><strong>“Real system(s)” ontology layer</strong></td><td>真实系统本体层</td><td>描述 S/4HANA Utilities、DER、MaCo、Service Cloud 等系统中的实际对象和关系。</td></tr>
+              <tr><td><strong>external / internal standards</strong></td><td>外部／内部标准</td><td>外部行业标准与企业系统中形成的内部语义规范。</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+
+        <div class="note-section">
+          <h3><i class="fa-solid fa-book-open"></i> 外部标准与上层本体</h3>
+          <div class="phrase-list">
+            <article><span class="phrase-index">01</span><div><h4>CIM</h4><p><strong>Common Information Model</strong>，通用信息模型。IEC 公用事业信息模型，用统一的对象、属性和关系表达电力系统及相关业务数据，帮助不同厂商系统交换信息。</p></div><span class="register">IEC 标准</span></article>
+            <article><span class="phrase-index">02</span><div><h4>IEEE 1547</h4><p>关于 <strong>DER 与电力系统互联及互操作</strong>的 IEEE 标准系列，覆盖性能、运行、安全、测试及信息交换等要求。</p></div><span class="register">并网标准</span></article>
+            <article><span class="phrase-index">03</span><div><h4>OpenADR 3.0</h4><p><strong>Open Automated Demand Response</strong> 3.0，开放自动需求响应通信标准。支持电网、聚合商和客户设备交换价格、事件、容量等信号，以协调负荷和分布式能源。</p></div><span class="register">需求响应</span></article>
+            <article><span class="phrase-index">04</span><div><h4>BFO</h4><p><strong>Basic Formal Ontology</strong>，基础形式本体。一种顶层本体，为“对象、过程、角色”等最通用类别提供一致的哲学和逻辑框架。</p></div><span class="register">顶层本体</span></article>
+            <article><span class="phrase-index">05</span><div><h4>IOF</h4><p><strong>Industrial Ontologies Foundry</strong>，工业本体基金会／工业本体协作体系。目标是建立可互操作的工业本体；其架构采用 BFO 作为顶层基础。</p></div><span class="register">工业本体</span></article>
+            <article><span class="phrase-index">06</span><div><h4>DEREG-Formats</h4><p>图中未展开全称。结合 Utilities 和区域市场语境，它很可能指<strong>能源市场放松管制环境中的监管／市场通信格式</strong>；确切定义需向图作者确认，不能仅凭图片确定。</p></div><span class="register tone">待确认</span></article>
+          </div>
+        </div>
+
+        <div class="note-section">
+          <h3><i class="fa-solid fa-server"></i> 系统与内部缩写</h3>
+          <div class="phrase-list">
+            <article><span class="phrase-index">01</span><div><h4>SAP S/4HANA Utilities</h4><p>SAP 面向公用事业行业的核心解决方案，覆盖计量、Meter-to-Cash、客户服务、设备管理、能源数据管理等流程。图中的 <em>S4/H UTL</em> 很可能是其内部简称，但应向团队确认规范写法。</p></div><span class="register">业务系统</span></article>
+            <article><span class="phrase-index">02</span><div><h4>DER</h4><p><strong>Distributed Energy Resource(s)</strong>，分布式能源资源，例如分布式光伏、储能、电动汽车充电设施及可控负荷。在图中也可能指 SAP Distributed Energy Resources 产品／领域模型。</p></div><span class="register">能源领域</span></article>
+            <article><span class="phrase-index">03</span><div><h4>MaCo</h4><p><strong>Market Communication</strong>，市场通信。在德国能源市场语境中，指市场参与者之间受监管的跨企业数据与消息交换；SAP MaCo Cloud 用于支持这些通信流程。</p></div><span class="register">SAP Utilities</span></article>
+            <article><span class="phrase-index">04</span><div><h4>Cx Service Cloud</h4><p>图中很可能指客户体验／客户服务方向的 Service Cloud 系统。<em>Cx</em> 的确切展开和产品边界未在图中定义；SAP 语境中可能与 Service Cloud 的 Utilities 扩展有关，需团队确认。</p></div><span class="register tone">部分待确认</span></article>
+          </div>
+        </div>
+
+        <div class="note-section">
+          <h3><i class="fa-solid fa-arrows-left-right-to-line"></i> 如何理解双向箭头</h3>
+          <div class="compare-grid">
+            <div class="compare-card"><span class="compare-label green">标准 → 系统</span><p>将 CIM、IEEE 1547 等标准中的规范概念映射到 SAP 系统对象，检查系统模型是否覆盖行业语义。</p></div>
+            <div class="compare-card"><span class="compare-label blue">系统 → 标准</span><p>从真实系统抽取业务对象，再映射回标准概念，识别企业特有扩展、名称冲突和语义缺口。</p></div>
+          </div>
+          <div class="usage-note"><i class="fa-solid fa-circle-info"></i>映射不一定是一对一：可能是一对多、多对一，或者需要转换规则。<em>Ontology mapping</em> 的目标是建立语义对应，而不只是字段名匹配。</div>
+        </div>
+
+        <div class="note-section">
+          <h3><i class="fa-solid fa-spell-check"></i> 图中文字的英语优化</h3>
+          <div class="communication-table-wrap"><table class="communication-table">
+            <thead><tr><th>图中写法</th><th>更自然的技术英语</th></tr></thead>
+            <tbody>
+              <tr><td>Top down</td><td><strong>Top-down</strong>（作定语时加连字符）</td></tr>
+              <tr><td>Utilities relevant, external standards</td><td><strong>external standards relevant to the utilities industry</strong></td></tr>
+              <tr><td>other dependent on regional “taste”</td><td><strong>other standards depending on regional requirements</strong></td></tr>
+              <tr><td>Bottom Up</td><td><strong>Bottom-up</strong></td></tr>
+              <tr><td>comprised of Utilities S/4 HANA Utilities derived ontology versions</td><td><strong>comprising ontology versions derived from SAP S/4HANA Utilities</strong></td></tr>
+              <tr><td>once they have a working Ontology</td><td><strong>once a usable ontology is available</strong></td></tr>
+            </tbody>
+          </table></div>
+        </div>
+
+        <div class="practice-card">
+          <div><span class="eyebrow">Active recall</span><h3>缩写自测</h3></div>
+          <ol><li>CIM → Common ________ Model</li><li>DER → Distributed Energy ________</li><li>MaCo → Market ________</li><li>BFO 在架构中属于领域系统本体还是顶层本体？</li></ol>
+          <details><summary>查看答案</summary><p>1. Information　2. Resource(s)　3. Communication　4. 顶层本体</p></details>
         </div>
       </section>
     </div>
